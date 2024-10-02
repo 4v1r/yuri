@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuri Online - Official Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #0b090a;
+            color: #eaeaea;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background-color: #0b090a;
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 2px solid #0056d7;
+        }
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #eaeaea;
+            letter-spacing: 4px;
+        }
+        .tagline {
+            font-size: 1.2em;
+            margin-top: 10px;
+            color: #0056d7;
+        }
+        .social-links {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .social-links a {
+            color: #eaeaea;
+            text-decoration: none;
+            margin: 10px 15px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+        }
+        .social-links a:hover {
+            color: #0056d7;
+        }
+        .social-links a i {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 60px;
+        }
+        .spotify-embed {
+            flex-basis: 100%;
+            margin-bottom: 60px;
+            display: flex;
+            justify-content: center;
+        }
+        .spotify-embed iframe {
+            max-width: 800px;
+            width: 100%;
+            border: 2px solid #0056d7;
+            border-radius: 8px;
+        }
+        .popular-tracks {
+            flex-basis: 100%;
+        }
+        .albums {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .album {
+            background-color: #0b090a;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #0056d7;
+        }
+        .album:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 86, 215, 0.2);
+        }
+        .album img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            border: 1px solid #0056d7;
+        }
+        .album img:hover {
+            opacity: 0.8;
+        }
+        h2 {
+            color: #0056d7;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .album h3 {
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #eaeaea;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Yuri Online</h1>
+            <p class="tagline">>.<</p>
+            <div class="social-links">
+                <a href="mailto:YuriOnline@aaa.lol"><i class="fas fa-envelope"></i> YuriOnline@aaa.lol</a>
+                <a href="https://www.instagram.com/yuri._.online" target="_blank" class="btn"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://www.facebook.com/p/Yuri-online-shopping-100083690672165" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+                <a href="https://open.spotify.com/artist/6X87X3dp4pzPM6B3ZmkA3v" target="_blank"><i class="fab fa-spotify"></i> Spotify</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container" role="main">
+        <div class="content">
+            <div class="spotify-embed">
+                <iframe src="https://open.spotify.com/embed/artist/6X87X3dp4pzPM6B3ZmkA3v" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+            </div>
+
+            <div class="popular-tracks">
+                <h2>Most Popular Releases</h2>
+                <div id="albumsContainer" class="albums">
+                    <!-- Albums will be added here dynamically via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
